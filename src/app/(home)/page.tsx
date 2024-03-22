@@ -60,6 +60,11 @@ const Home = async () => {
         src="/banner-home-03.png"
         alt="Até 20% de desconto em fones"
       />
+
+      <div>
+        <SectionTitle>Mouses</SectionTitle>
+        <ProductList products={mouses} />
+      </div>
     </div>
   );
 };
