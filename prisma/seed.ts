@@ -9,7 +9,7 @@ async function main() {
         name: "Mouses",
         slug: "mouses",
         imageUrl:
-          "https://utfs.io/f/bbf1a852-90b5-4c1f-bece-e3ae050169b1-5jk68j.png",
+          "https://utfs.io/f/dd9e0bd0-bf5b-460c-b8aa-1e14324d6a6a-g2a87g.png",
       },
     });
 
@@ -100,7 +100,7 @@ async function main() {
         name: "Teclados",
         slug: "keyboards",
         imageUrl:
-          "https://utfs.io/f/a8bbd591-bb68-4478-95e5-2f0226d3b383-33zg48.png",
+          "https://utfs.io/f/43d52415-d9f4-49eb-9776-9b8038cd30a1-lq7r02.png",
       },
     });
 
@@ -206,7 +206,7 @@ async function main() {
         name: "Fones",
         slug: "headphones",
         imageUrl:
-          "https://utfs.io/f/98b3a1b5-7215-4055-8130-f66e97996a03-cuwa00.png",
+          "https://utfs.io/f/52c1a976-1014-4347-b17c-2842d251f150-q6b16.png",
       },
     });
 
@@ -312,7 +312,7 @@ async function main() {
         name: "Mousepads",
         slug: "mousepads",
         imageUrl:
-          "https://utfs.io/f/57770d31-49ff-442b-af87-5dc76a5b9c8e-on5ldd.png",
+          "https://utfs.io/f/7b385a65-6b20-45c1-8fff-f902214e4fac-e8tsms.png",
       },
     });
 
@@ -418,7 +418,7 @@ async function main() {
         name: "Monitores",
         slug: "monitors",
         imageUrl:
-          "https://utfs.io/f/ff5b0ea9-66c0-4c53-ae09-aaf70a8c8213-l17xro.png",
+          "https://utfs.io/f/37ac63df-31f3-471c-9453-617ae3abe5d1-5xhrgg.png",
       },
     });
 
@@ -524,7 +524,7 @@ async function main() {
         name: "Speakers",
         slug: "speakers",
         imageUrl:
-          "https://utfs.io/f/2f9c2b91-7ab0-4206-a3f0-8c7c5f802f45-b5j8co.png",
+          "https://utfs.io/f/cb4845fa-8682-46ea-ad1a-263957824e8d-t2xrx7.png",
       },
     });
 
