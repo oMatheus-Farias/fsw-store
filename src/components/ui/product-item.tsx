@@ -17,7 +17,7 @@ const ProductItem = ({ product }: ProductItemProps) => {
           width={0}
           height={0}
           sizes="100vw"
-          className="h-auto max-h-[70%] w-auto max-w-[80%]"
+          className="h-auto max-h-[70%] w-auto max-w-[80%] object-contain"
         />
         {product.discountPercentage > 0 && (
           <Badge className="absolute left-2 top-2 px-2 py-[2px]">
