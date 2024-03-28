@@ -15,7 +15,7 @@ const OrderProductItem = ({ orderProduct }: OrderProductItemProps) => {
 
   return (
     <div className="flex items-center gap-4">
-      <div className="flex h-[77px] w-[77px] items-center justify-center rounded-lg bg-accent">
+      <div className="flex h-[77px] w-[100px] items-center justify-center rounded-lg bg-accent">
         <Image
           src={orderProduct.product.imageUrls[0]}
           alt={orderProduct.product.name}
@@ -29,7 +29,8 @@ const OrderProductItem = ({ orderProduct }: OrderProductItemProps) => {
       <div className="flex w-full flex-col gap-1">
         <div className="flex w-fit rounded-md bg-accent px-3 py-1">
           <p className="text-[10px]">
-            Vendido e entregue pro <span className="font-bold">FSW Store</span>
+            Vendido e entregue por
+            <span className="font-bold italic"> FSW Store</span>
           </p>
         </div>
         <p className="text-xs">{orderProduct.product.name}</p>
