@@ -32,10 +32,7 @@ const OrdersPage = async () => {
 
   return (
     <div className="p-5">
-      <Badge
-        className="w-fit gap-1 border-2 border-primary px-3 py-[0.37em] text-base uppercase"
-        variant="outline"
-      >
+      <Badge variant="heading">
         <PackageSearchIcon size={16} />
         Meus Pedidos
       </Badge>
