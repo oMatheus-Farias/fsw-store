@@ -44,7 +44,7 @@ const Home = async () => {
         />
       </div>
 
-      <div className="container flex flex-col gap-8 py-8">
+      <div className="flex flex-col gap-8 py-8 lg:container lg:gap-10">
         <PromoBanner
           src="/banner-home-01.png"
           alt="Até 55% de desconto só esse mês"
@@ -52,7 +52,7 @@ const Home = async () => {
           className="lg:hidden"
         />
 
-        <div className="p-5">
+        <div className="mt-2 p-5">
           <Categories />
         </div>
 
