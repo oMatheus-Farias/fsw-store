@@ -80,11 +80,19 @@ const Home = async () => {
           <ProductList products={keyboards} />
         </div>
 
-        <PromoBanner
-          src="/banner-home-03.png"
-          alt="Até 20% de desconto em fones"
-          className="lg:hidden"
-        />
+        <div>
+          <PromoBanner
+            src="/banner-home-03.png"
+            alt="Até 20% de desconto em fones"
+            className="lg:hidden"
+          />
+
+          <PromoBanner
+            src="/free-shipping-banner.png"
+            alt="Frete grátis para todo o Brasil"
+            className="hidden lg:block"
+          />
+        </div>
 
         <div className="flex flex-col gap-3 lg:gap-5">
           <SectionTitle className="pl-5">Mouses</SectionTitle>
