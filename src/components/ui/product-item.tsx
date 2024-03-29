@@ -11,7 +11,7 @@ const ProductItem = ({ product }: ProductItemProps) => {
   return (
     <Link href={`/product/${product.slug}`}>
       <div className="flex min-w-[156px] flex-col gap-4">
-        <div className="relative flex h-[170px] w-full items-center justify-center rounded-lg bg-accent">
+        <div className="relative flex h-[170px] w-full items-center justify-center rounded-lg bg-accent lg:h-[200px]">
           <Image
             src={product.imageUrls[0]}
             alt={product.name}
