@@ -4,6 +4,7 @@ import { prismaClient } from "@/lib/prisma";
 import ProductList from "../../components/ui/product-list";
 import SectionTitle from "../../components/ui/section.title";
 import PromoBanner from "./components/promo-banner";
+import Link from "next/link";
 
 const Home = async () => {
   const deals = await prismaClient.product.findMany({
@@ -33,24 +34,25 @@ const Home = async () => {
   return (
     <>
       <div className="mx-auto max-w-[1920px]">
-        <Image
-          src="/deals-banner.png"
-          alt="Até 55% de desconto só esse mês"
-          width={0}
-          height={0}
-          sizes="100vw"
-          priority
-          className="hidden h-auto w-full lg:block"
-        />
+        <Link href="/deals">
+          <PromoBanner
+            src="/deals-banner.png"
+            alt="Até 55% de desconto só esse mês"
+            priority
+            className="hidden h-auto w-full lg:block"
+          />
+        </Link>
       </div>
 
       <div className="flex flex-col gap-8 py-8 lg:container lg:gap-10">
-        <PromoBanner
-          src="/banner-home-01.png"
-          alt="Até 55% de desconto só esse mês"
-          priority
-          className="lg:hidden"
-        />
+        <Link href="/deals">
+          <PromoBanner
+            src="/banner-home-01.png"
+            alt="Até 55% de desconto só esse mês"
+            priority
+            className="p-5 lg:hidden"
+          />
+        </Link>
 
         <div className="mt-2 p-5">
           <Categories />
@@ -62,17 +64,21 @@ const Home = async () => {
         </div>
 
         <div className="flex flex-col lg:flex-row">
-          <PromoBanner
-            src="/banner-home-02.png"
-            alt="Até 55% de desconto em mouses"
-            className="lg:w-0 lg:flex-1"
-          />
+          <Link href="/category/mouses" className="flex flex-1">
+            <PromoBanner
+              src="/banner-home-02.png"
+              alt="Até 55% de desconto em mouses"
+              className="p-5 lg:w-0 lg:flex-1 lg:p-0 lg:pr-5"
+            />
+          </Link>
 
-          <PromoBanner
-            src="/banner-home-03.png"
-            alt="Até 20% de desconto em fones"
-            className="hidden lg:block lg:w-0 lg:flex-1"
-          />
+          <Link href="/category/headphones" className="flex flex-1">
+            <PromoBanner
+              src="/banner-home-03.png"
+              alt="Até 20% de desconto em fones"
+              className="hidden lg:block lg:w-0 lg:flex-1"
+            />
+          </Link>
         </div>
 
         <div className="flex flex-col gap-3 lg:gap-5">
@@ -81,17 +87,21 @@ const Home = async () => {
         </div>
 
         <div>
-          <PromoBanner
-            src="/banner-home-03.png"
-            alt="Até 20% de desconto em fones"
-            className="lg:hidden"
-          />
+          <Link href="/category/headphones">
+            <PromoBanner
+              src="/banner-home-03.png"
+              alt="Até 20% de desconto em fones"
+              className="p-5 lg:hidden"
+            />
+          </Link>
 
-          <PromoBanner
-            src="/free-shipping-banner.png"
-            alt="Frete grátis para todo o Brasil"
-            className="hidden lg:block"
-          />
+          <Link href="/catalog">
+            <PromoBanner
+              src="/free-shipping-banner.png"
+              alt="Frete grátis para todo o Brasil"
+              className="hidden px-5 lg:block"
+            />
+          </Link>
         </div>
 
         <div className="flex flex-col gap-3 lg:gap-5">
