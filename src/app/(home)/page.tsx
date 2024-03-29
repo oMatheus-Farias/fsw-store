@@ -61,10 +61,19 @@ const Home = async () => {
           <ProductList products={deals} />
         </div>
 
-        <PromoBanner
-          src="/banner-home-02.png"
-          alt="Até 55% de desconto em mouses"
-        />
+        <div className="flex flex-col lg:flex-row">
+          <PromoBanner
+            src="/banner-home-02.png"
+            alt="Até 55% de desconto em mouses"
+            className="lg:w-0 lg:flex-1"
+          />
+
+          <PromoBanner
+            src="/banner-home-03.png"
+            alt="Até 20% de desconto em fones"
+            className="hidden lg:block lg:w-0 lg:flex-1"
+          />
+        </div>
 
         <div className="flex flex-col gap-3 lg:gap-5">
           <SectionTitle className="pl-5">Teclados</SectionTitle>
@@ -74,6 +83,7 @@ const Home = async () => {
         <PromoBanner
           src="/banner-home-03.png"
           alt="Até 20% de desconto em fones"
+          className="lg:hidden"
         />
 
         <div className="flex flex-col gap-3 lg:gap-5">
