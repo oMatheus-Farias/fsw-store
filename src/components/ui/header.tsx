@@ -171,7 +171,10 @@ const Header = () => {
             </Button>
           </SheetTrigger>
 
-          <SheetContent side="right" className="w-[90%]">
+          <SheetContent
+            side="right"
+            className="w-[90%] lg:w-[40%] lg:max-w-[40%]"
+          >
             <Cart />
           </SheetContent>
         </Sheet>
