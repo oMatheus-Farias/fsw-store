@@ -37,9 +37,9 @@ const ProductsTable = ({ products }: ProductsTableProps) => {
 
             <TableCell>{product.category.name}</TableCell>
 
-            <TableCell>{product.totalPrice.toFixed(2)}</TableCell>
+            <TableCell>R$ {product.totalPrice.toFixed(2)}</TableCell>
 
-            <TableCell>{Number(product.basePrice).toFixed(2)}</TableCell>
+            <TableCell>R$ {Number(product.basePrice).toFixed(2)}</TableCell>
 
             <TableCell>0</TableCell>
           </TableRow>
