@@ -3,7 +3,7 @@ import { authOptions } from "@/lib/auth";
 import { prismaClient } from "@/lib/prisma";
 import { PackageSearchIcon } from "lucide-react";
 import { getServerSession } from "next-auth";
-import OrderItem from "./components/order-item";
+import OrderItem from "../../../components/ui/order-item";
 
 const OrdersPage = async () => {
   const user = await getServerSession(authOptions);
