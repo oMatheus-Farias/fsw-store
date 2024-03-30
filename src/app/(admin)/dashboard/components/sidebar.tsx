@@ -44,15 +44,17 @@ const Sidebar = () => {
           </Button>
         </Link>
 
-        <Button
-          variant="outline"
-          className={`flex w-full justify-start gap-2
+        <Link href="/dashboard/categories">
+          <Button
+            variant="outline"
+            className={`flex w-full justify-start gap-2
           ${path.includes("/categories") && "bg-primary text-white hover:bg-primary"}
           `}
-        >
-          <ListOrderedIcon size={16} />
-          Categorias
-        </Button>
+          >
+            <ListOrderedIcon size={16} />
+            Categorias
+          </Button>
+        </Link>
 
         <Button
           variant="outline"
