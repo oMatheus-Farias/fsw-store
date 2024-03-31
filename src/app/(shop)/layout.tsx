@@ -5,6 +5,7 @@ import Header from "@/components/ui/header";
 import { AuthProvider } from "@/providers/auth";
 import Footer from "@/components/ui/footer";
 import CartProvider from "@/providers/cart";
+import HeaderDesktop from "@/components/ui/header-desktop";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
           <AuthProvider>
             <CartProvider>
               <Header />
+              <HeaderDesktop />
               <div className="flex-1">{children}</div>
               <Footer />
             </CartProvider>

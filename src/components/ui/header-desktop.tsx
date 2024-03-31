@@ -5,13 +5,12 @@ import {
   ListOrderedIcon,
   LogInIcon,
   LogOutIcon,
-  MenuIcon,
   PackageSearchIcon,
   PercentIcon,
   ShoppingCartIcon,
+  UserRoundIcon,
 } from "lucide-react";
 import { Button } from "./button";
-import { Card } from "./card";
 import {
   Sheet,
   SheetClose,
@@ -19,15 +18,15 @@ import {
   SheetHeader,
   SheetTrigger,
 } from "./sheet";
-import { signIn, signOut, useSession } from "next-auth/react";
-import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
-import { Separator } from "@radix-ui/react-separator";
-import Link from "next/link";
 import Cart from "./cart";
 import { useContext } from "react";
 import { CartContext } from "@/providers/cart";
+import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
+import { Separator } from "./separator";
+import { signIn, signOut, useSession } from "next-auth/react";
+import Link from "next/link";
 
-const Header = () => {
+const HeaderDesktop = () => {
   const { status, data } = useSession();
 
   const { products } = useContext(CartContext);
@@ -45,12 +44,36 @@ const Header = () => {
   };
 
   return (
-    <Card className="lg:hidden">
-      <div className="flex items-center justify-between p-[1.87em] lg:container">
+    <header className="hidden min-h-[116px] w-full items-center justify-between bg-background lg:container lg:mx-auto lg:flex">
+      <Link href="/">
+        <p className="text-2xl font-bold text-primary">
+          FSW <span className="text-white">Store</span>
+        </p>
+      </Link>
+
+      <div className="flex items-center gap-8 font-semibold text-white">
+        <Link href="/">
+          <button>Home</button>
+        </Link>
+
+        <div className="h-6 w-[3px] rounded bg-accent"></div>
+
+        <Link href="/catalog">
+          <button>Catálogo</button>
+        </Link>
+
+        <div className="h-6 w-[3px] rounded bg-accent"></div>
+
+        <Link href="/deals">
+          <button>Ofertas</button>
+        </Link>
+      </div>
+
+      <div className="flex items-center gap-7">
         <Sheet>
           <SheetTrigger asChild>
             <Button size="icon" variant="outline">
-              <MenuIcon />
+              <UserRoundIcon />
             </Button>
           </SheetTrigger>
 
@@ -153,12 +176,6 @@ const Header = () => {
           </SheetContent>
         </Sheet>
 
-        <Link href="/">
-          <h1 className="text-lg font-semibold">
-            <span className="font-extrabold text-primary">FSW</span> Store
-          </h1>
-        </Link>
-
         <Sheet>
           <SheetTrigger asChild>
             <Button size="icon" variant="outline" className="relative">
@@ -179,8 +196,8 @@ const Header = () => {
           </SheetContent>
         </Sheet>
       </div>
-    </Card>
+    </header>
   );
 };
 
-export default Header;
+export default HeaderDesktop;
