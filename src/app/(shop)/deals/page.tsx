@@ -14,7 +14,7 @@ const DealsPage = async () => {
   });
 
   return (
-    <div className="flex flex-col gap-5 p-5">
+    <div className="flex flex-col gap-5 p-5 lg:container lg:mx-auto">
       <Badge
         className="w-fit gap-1 border-2 border-primary px-3 py-[0.37em] text-base uppercase"
         variant="heading"
@@ -23,7 +23,7 @@ const DealsPage = async () => {
         Ofertas
       </Badge>
 
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-2 gap-8 lg:grid-cols-3">
         {deals.map((product) => (
           <ProductItem
             key={product.id}
